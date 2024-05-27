@@ -16,7 +16,7 @@ import org.springframework.web.socket.messaging.SessionDisconnectEvent;
 public class StompHandler implements ChannelInterceptor {
   @Override
   public Message<?> preSend(Message<?> message, MessageChannel channel) {
-    log.info("Stomp Handler 실행");
+    log.info("Stomp Handler 실행됨");
     StompHeaderAccessor headerAccessor = StompHeaderAccessor.wrap(message);
     //헤더 토큰 얻기
     //String authorizationHeader = String.valueOf(headerAccessor.getNativeHeader("Authorization"));
